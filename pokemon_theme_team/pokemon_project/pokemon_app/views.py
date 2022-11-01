@@ -28,6 +28,7 @@ def get_pokemon(request, name):
         # responseJson=response.json()
 
         types_url=responseJson["types"][0]['type']['url']
+        data["main_poke"]=responseJson["sprites"]["other"]["official-artwork"]["front_default"]
         types=requests.get(types_url).json()
         # pp.pprint(types["pokemon"])
         for x in range(1, 6):
@@ -36,6 +37,6 @@ def get_pokemon(request, name):
             data[str(x)]=current_pokemon_json["sprites"]["other"]["official-artwork"]["front_default"]
             # pp.pprint(data[x])
         pp.pprint(data)
-        return render(request, "main_page.html", data)
+        return JsonResponse(data)
     except:
         return
