@@ -1,0 +1,15 @@
+<html>
+  <head>
+    
+    <title>{{my_school.name}}</title>
+  </head>
+
+  <body>
+    <h2>{{my_school.name}} Staff Directory</h2>
+    <ul>
+        {%for x in my_school.staff %}
+        <li><a href={{x.employee_id}}>{{x.employee_id}}</a></li>
+        {%endfor%}
+    </ul>
+  </body>
+</html>

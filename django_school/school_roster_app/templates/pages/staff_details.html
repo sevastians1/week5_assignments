@@ -1,0 +1,22 @@
+<html>
+  <head>
+    
+    <title>{{staff}}</title>
+  </head>
+
+  <body>
+    {%if staff%}
+    <h2>{{staff.name}}'s Directory</h2>
+    {{staff.name}}
+    <ul>
+        <li>name, {{staff.name}}</li>
+        <li>age, {{staff.age}}</li>
+        <li>role, {{staff.role}}</li>
+        <li>employee_id, {{staff.employee_id}}</li>
+        <li>password, {{staff.password}}</li>
+    </ul>
+    {%else%}
+    <p>No employee by that id </p>
+    {%endif%}
+  </body>
+</html>

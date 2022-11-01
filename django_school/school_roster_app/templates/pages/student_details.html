@@ -1,0 +1,26 @@
+
+<html>
+  <head>
+    
+    <title>{{student}}</title>
+  </head>
+
+  <body>
+    {%if student%}
+    <h2>{{student.name}}'s Directory</h2>
+    {{student.name}}
+    <ul>
+        <li>name: {{student.name}}</li>
+        <li>age: {{student.age}}</li>
+        <li>role: {{student.role}}</li>
+        <li>school_id: {{student.school_id}}</li>
+        <li>password: {{student.password}}</li>
+    </ul>
+    {%else%}
+    <p>No student by that id </p>
+    {%endif%}
+
+
+    </ul>
+  </body>
+</html>

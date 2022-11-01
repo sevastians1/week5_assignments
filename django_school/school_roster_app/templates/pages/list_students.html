@@ -1,0 +1,23 @@
+
+<html>
+  <head>
+    
+    <title>{{my_school.name}}</title>
+  </head>
+
+  <body>
+    <h2>{{my_school.name}} Student Directory</h2>
+<div> Please enter your student ID</div>
+<div>
+<form action="student_details/" method="POST">
+  {% csrf_token %}
+    <input type="number" name="student_id" id="enter_id" value="student_id">
+    <label for="student ID"></label>
+    <button type="submit" name="click here" > 
+      <a>Click here to go to submitted student information</a>
+  </form>
+
+</div>    
+
+  </body>
+</html>
